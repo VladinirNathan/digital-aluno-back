@@ -46,3 +46,12 @@ model vagas {
   criado_em     DateTime @default(now()) @db.DateTime(0)
   atualizado_em DateTime @default(now()) @db.DateTime(0)
 }
+
+model eventos {
+  evento_id     Int      @id @default(autoincrement())
+  evento_titulo String   @db.VarChar(100)
+  evento_imagem String   @db.VarChar(255)
+  vaga_link     String   @db.VarChar(255)
+  criado_em     DateTime @default(now()) @db.DateTime(0)
+  atualizado_em DateTime @default(now()) @db.DateTime(0)
+}
